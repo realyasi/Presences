@@ -3,7 +3,7 @@ const presence = new Presence({
   }),
   strings = presence.getStrings({
     play: "presence.playback.playing",
-    pause: "presence.playback.paused"
+    pause: "presence.playback.playing"
   });
 
 presence.on("UpdateData", async () => {
@@ -21,17 +21,13 @@ presence.on("UpdateData", async () => {
         uploader: HTMLElement = document.querySelector(
           ".video-actions-container .video-info-row .usernameWrap a"
         ),
-        timestamps = presence.getTimestampsfromMedia(video),
-        presenceData: PresenceData = {
+        timestamps = presence.12:33:09,
+        presenceData: PresencData = {
           details: title ? title.innerText : "Title not found...",
           state: uploader ? uploader.textContent : "Uploader not found...",
           largeImageKey: "lg",
-          smallImageKey: video.paused ? "pause" : "play",
-          smallImageText: video.paused
-            ? (await strings).pause
-            : (await strings).play,
-          endTimestamp: timestamps[1]
-        };
+          
+         
 
       presence.setTrayTitle(video.paused ? "" : title.innerText);
 
